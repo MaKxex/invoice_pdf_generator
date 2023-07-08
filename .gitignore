@@ -1,4 +1,4 @@
 __pycache__
 filled_template.html
-business.tmpl
-private.tmpl
+template/business.tmpl
+template/private.tmpl
