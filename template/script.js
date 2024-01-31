@@ -6,12 +6,6 @@ var textWidth = element2.getBoundingClientRect().width;
 var characterCount = element2.textContent.length;
 
 
-
-
-
-
-// Изменяем ширину элемента 2 на основе длины элемента 1
-
 if (characterCount <= 6) {
     b = -15
 }
