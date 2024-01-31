@@ -23,13 +23,14 @@ body {
 
 }
 
+
 .abstractLine{
     position: absolute;
     width: 181px;
     height: 30px;
     flex-shrink: 0;
     background: #AAA;
-
+    
     top: 43px;
     z-index: 0;
 }
@@ -44,12 +45,25 @@ body {
     z-index: 2;
 }
 
+
 /* header */
+
+.header-left-top {
+    display: flex;
+    align-items: center;
+}
 
 .productType {
     position: relative;
     margin: 0;
     width: inherit;
+
+}
+.document_number {
+    display: flex;
+    font-size: 34px;
+    margin-left: 25px;
+
 }
 
 /* /header */
@@ -204,6 +218,21 @@ tr {
     margin-top: 15px;
 }
 
+.payerTask {
+    display: flex;
+    color: var(--black, #1C1B1F);
+    font-size: 16px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: end;
+    justify-content: end;
+    margin-right: 8px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
 /* /payNotification */
 
 
@@ -232,6 +261,14 @@ tr {
     text-align: start;
 }
 
+.documentMetaData {
+    color: #000;
+    font-size: 12px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 .digitDoc{
     color: var(--black, #1C1B1F);
     font-size: 12px;
@@ -241,13 +278,5 @@ tr {
     line-height: normal;
 }
 
-.documentMetaData {
-    color: #000;
-    font-size: 12px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 
 /* /footer */

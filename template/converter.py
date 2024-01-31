@@ -2,8 +2,7 @@ import os
 from pyhtml2pdf import converter
 from Cheetah.Template import Template
 from .config import *
-from typing import NamedTuple
-
+import pdfkit
 
 class Converter:
     def __init__(self, template_name:str):
@@ -19,7 +18,8 @@ class Converter:
         template_content = self.__load_template()
 
         # Создаем экземпляр шаблона и заполняем его данными
-        template = Template(template_content, searchList=[data])
+        print(data.__dict__)
+        template = Template(template_content, searchList=[data.__dict__])
 
         # Получаем заполненный HTML-код
         filled_template = str(template)
@@ -30,7 +30,13 @@ class Converter:
             file.write(filled_template)
 
     def __convert_to_pdf(self,filename):
+        print("asdasdasdasd")
+        print(html_path)
+        print(pdfs_dir)
+        print(filename)
         converter.convert(f'file:///{html_path}', f'{pdfs_dir}/{filename}.pdf')
+        # config = pdfkit.configuration(wkhtmltopdf=wkhtmltox_path)
+        # pdfkit.from_file(html_path, f'{pdfs_dir}/{filename}.pdf',configuration=config)
         return f'{pdfs_dir}/{filename}.pdf'
 
     def __load_template(self) -> Template:
